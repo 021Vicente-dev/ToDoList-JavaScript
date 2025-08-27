@@ -1,0 +1,111 @@
+body {
+    background: #5154fc;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: #f0f7f8;
+  box-shadow: 1px 1px 5px rgb(114, 114, 114);
+}
+
+.left,
+.right {
+  background-color: #daf5f8;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* input + botão lado a lado */
+.input-container {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #ebe9e9;
+}
+
+.input-container button {
+  flex: 0 0 30%;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-container button:hover {
+  background-color: #aaa;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(99, 99, 255);
+  margin-bottom: 1rem;
+}
+
+/* lista de tarefas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 0 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  height: 50px;
+
+  background-color: blueviolet;
+  color: white;
+  border-radius: 1rem;
+  margin: 0.5rem auto;
+  width: 80%;     
+  max-width: 400px;
+}
+
+span {
+  margin-left: 1rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+span:hover {
+  transition: 0.3s;
+  background-color: #cccccc5b;
+  border-radius: 50%;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;     /* vira uma coluna só no mobile */
+  }
+
+  li {
+    width: 100%;
+  }
+}
